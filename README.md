@@ -10,7 +10,7 @@ And on Windows, it runs in IIS with the .NET 9 runtime (hosting bundle) installe
 
 You can scan all or a subset of the discs in the changer to populate the display. Also, when the changer loads a disc, it checks to see whether it is a known disc. If not, DiscChanger.NET will look it up and show it on the grid without reloading the page. By clicking on a music CD, you get a <a href="doc/DiscChanger.NET Popover audio tracks and links.png">popover</a> showing listing of tracks as well as web links known to the metadata providers pertaining to the disc.
 
-To get started, go <a href="https://dotnet.microsoft.com/download/dotnet/7.0">here</a> to obtain the correct ASP.NET Core runtime for your OS. For the Raspberry Pi 4 running Raspian, I had to download the ARM32 version even though its CPU is 64 bit. Download DiscChanger.NET from the <a href="https://github.com/hugo-lyppens/DiscChanger.NET/releases">release list</a>
+To get started, go <a href="https://dotnet.microsoft.com/download/dotnet/9.0">here</a> to obtain the correct ASP.NET Core runtime for your OS. For the Raspberry Pi 4 running Raspian, I had to download the ARM32 version even though its CPU is 64 bit. Download DiscChanger.NET from the <a href="https://github.com/hugo-lyppens/DiscChanger.NET/releases">release list</a>
 
 Then ensure you have serial ports working and null modem cables to connect to your disc changers. For PCs, I strongly recommend using any unused motherboard serial port headers (enable in BIOS & connect via Slot Plate adapter from 9-pin Serial to 10-pin mobo Header) before adding USB serial ports. My Supermicro board has two DTK serial port headers, which I've used for my cx777es changers, and my cx7000es is connected via a PL2303 USB serial port adapter.
 
@@ -37,3 +37,6 @@ Version 1.8: upgrade to .NET 9 (not yet using any of its new features).
 Future enhancements planned:
 - Support for Firewire changers such as XL1B.
 
+If something does not work right, especially after updates to client-side libraries in libman.json, be sure to clear your browser cache or do a hard refresh (Ctrl-F5 in most browsers).
+
+Pull requests welcome!
